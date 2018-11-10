@@ -11,10 +11,10 @@ var connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
-    youSuck();
+    showOptions();
 });
 
-function youSuck() {
+function showOptions() {
     inquirer.prompt([
         {
             type: "list",
