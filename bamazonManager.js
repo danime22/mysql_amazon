@@ -19,7 +19,7 @@ function youSuck() {
         {
             type: "list",
             name: "choice",
-            message: "What do you want huh?",
+            message: "Please select an option",
             choices: [{
                 name: "View Products for Sale",
                 value: "ViewProd"
@@ -175,7 +175,7 @@ function newProduct() {
         var insert = "INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES('" + answer.name + "', '" + answer.department + "', " + parseFloat(answer.price) + ", " + parseInt(answer.quantity) + ")";
         connection.query(insert, function (err, result) {
             if (err) throw err;
-            console.table(result);
+            console.log("Item Added.");
             connection.end();
 
         });

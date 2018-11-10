@@ -23,7 +23,7 @@ function question() {
         {
             type: "list",
             name: "choice",
-            message: "What you want from me?!",
+            message: "Select an option",
             choices: [{
                 name: "View Product Sales by Department",
                 value: "ProductSales"
@@ -65,12 +65,12 @@ function createDepartment() {
         {
             type: "input",
             name: "name",
-            message: "What name?"
+            message: "Department name?"
         },
         {
             type: "input",
             name: "cost",
-            message: "Over costs?",
+            message: "Overhead cost?",
             validate: function (value) {
                 if (isNaN(value) === false && value > 0) {
                     return true;

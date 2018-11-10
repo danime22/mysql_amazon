@@ -61,7 +61,7 @@ function question() {
             if (err) throw err;
 
             if (res[0].count == 0) {
-                console.log("Invalid ID.. stupid!");
+                console.log("Invalid ID. Please enter a valid Item ID.");
                 connection.end();
             } else {
                 var query = "SELECT stock_quantity FROM products WHERE ?";
